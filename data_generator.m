@@ -42,7 +42,7 @@ fvals = cell(trials,length(m_vect));
 
 rng shuffle
 %% Computations
-parfor i=1:length(m_vect)
+for i=1:length(m_vect)
     for j=1:trials
         C = weights_net(N,hp,ho,m_vect(i),l,q,lambda);
         c_data{j,i} = sparse(C);
