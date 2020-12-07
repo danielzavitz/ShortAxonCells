@@ -13,7 +13,7 @@ ec = zeros(glomnum,odornum);
 sac = zeros(glomnum,odornum);
 fvals = zeros(glomnum*2,odornum);
 
-for i=1:odornum
+parfor i=1:odornum
     [ec(:,i),sac(:,i),fvals(:,i)] = dF_dynamics(I(:,i),w1,w2,b1,b2,v,ep1,a,C);
 end
 
